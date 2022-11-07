@@ -1,10 +1,13 @@
 <div align="center">
-    <img src="logo/extension.png"/>
-    <h1>Exclamation Point Propagandist</h1>
+    <img width="298" alt="exclamation" src="https://user-images.githubusercontent.com/46863334/200347789-1d68e9d8-cf23-4acb-954e-bbc8c397a561.png">
+    <h1>Period to Exclamation point</h1>
     <h3>Chrome v3 extension to replace periods with exclamation points</h3>
 </div>
 
-Keen to add an aura of hysteria to the emails or paper articles you read on the internet? Install this minimal extension that replaces single periods with three exclamation points. It's largely built off of this 🚀 [Minimal Chrome extension template using manifest v3](https://github.com/SimGus/chrome-extension-v3-starter) 🚀. 
+Tired of feeling like you need to chill on the exclamation points and frustrated that no one else seems to be using them enough? 
+Keen to add an aura of hysteria to the emails or paper articles you read on the internet?   
+
+Install this minimal extension that replaces single periods with three exclamation points. It's largely built off of this 🚀 [Minimal Chrome extension template using manifest v3](https://github.com/SimGus/chrome-extension-v3-starter) 🚀 and the [millennials-to-snake-people chrome extension](https://github.com/ericwbailey/millennials-to-snake-people). 
 
 ## Installation 🌸 
 - **Fork** this repo, then **clone your forked repo locally**. If you don't have a github account, you can simply download a zip of the repo and unzip it on your computer.
