@@ -1,0 +1,12 @@
+body {
+    background-color: #eee;
+    color: rgb(255, 0, 0);
+
+    width: 16rem;
+    height: 4rem;
+    font: normal 14px courier;
+}
+
+.special-text {
+    color: rgb(255, 0, 255);
+}
