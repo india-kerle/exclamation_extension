@@ -21,13 +21,17 @@ function handleText(textNode) {
   textNode.nodeValue = replaceText(textNode.nodeValue);
 }
 
-//TO DOs: don't replace periods in the middle of emails or percentages
 function replaceText(v)
 {
-    v = v.replace('.', '!!!');
+    v = v.replace(/\.$/, "!!! ");
+    v = v.replace(/\."$/, '!!!" ');
 
-    return v;
+    return v
 }
+
+function remove(s){
+    return s[s.length - 1] === "!" ? s.slice(0, s.length - 1) : s
+  }
 
 // Returns true if a node should *not* be altered in any way
 function isForbiddenNode(node) {
@@ -70,7 +74,6 @@ function walkAndObserve(doc) {
 
     // Do the initial text replacements in the document body and title
     walk(doc.body);
-    
 
     doc.title = replaceText(doc.title);
 
