@@ -5,7 +5,7 @@
 </div>
 
 Tired of feeling like you need to chill on the exclamation points and frustrated that no one else seems to be using them enough? 
-Keen to add an aura of hysteria to the emails or paper articles you read on the internet?   
+Keen to add an aura of hysteria to the emails or articles you read on the internet?   
 
 Install this minimal extension that replaces single periods with three exclamation points. It's largely built off of this 🚀 [Minimal Chrome extension template using manifest v3](https://github.com/SimGus/chrome-extension-v3-starter) 🚀 and the [millennials-to-snake-people chrome extension](https://github.com/ericwbailey/millennials-to-snake-people). 
 
