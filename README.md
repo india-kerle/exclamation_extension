@@ -1,18 +1,101 @@
 <div align="center">
-    <img width="298" alt="exclamation" src="https://user-images.githubusercontent.com/46863334/200347789-1d68e9d8-cf23-4acb-954e-bbc8c397a561.png">
-    <h1>Period to Exclamation point</h1>
-    <h3>Chrome v3 extension to replace periods with exclamation points</h3>
+  <img width="128" alt="exclamation" src="logo/exclamation-128.png">
+  <h1>Exclamation Propagandist</h1>
+  <h3>Experience the internet more hysterically</h3>
 </div>
 
-Tired of feeling like you need to chill on the exclamation points and frustrated that no one else seems to be using them enough? 
-Keen to add an aura of hysteria to the emails or articles you read on the internet?   
+A Chrome extension that replaces periods with exclamation points on your favorite websites. Because everything is more exciting with exclamation points!!!
 
-Install this minimal extension that replaces single periods with three exclamation points. It's largely built off of this 🚀 [Minimal Chrome extension template using manifest v3](https://github.com/SimGus/chrome-extension-v3-starter) 🚀 and the [millennials-to-snake-people chrome extension](https://github.com/ericwbailey/millennials-to-snake-people). 
+## Features
 
-## Installation 🌸 
-- **Fork** this repo, then **clone your forked repo locally**. If you don't have a github account, you can simply download a zip of the repo and unzip it on your computer.
-- **Open [the extensions page](chrome://extensions)** in your browser: `chrome://extensions`. This link works on any chromium-based browser.
-- If you did not do it already, **toggle the "developer mode"**. This is usually a toggle button at the top right of the extensions page.
-- Click the button **_load unpacked extension_**.
-- In the window that pops up, **select the folder that contains this minimal extension**, then **click _ok_**.
-- **Done!** A new extension called _Periods to Exclamations!!!_ should have appeared in the list.
+- **Configurable allowlist** - Choose which sites get the exclamation treatment
+- **Pre-defined categories** - Quick toggles for News, Email, and Social Media sites
+- **Custom sites** - Add any site you want
+- **Adjustable intensity** - Choose 1-5 exclamation points per period
+- **Smart detection** - Only replaces sentence-ending periods (preserves URLs, decimals, etc.)
+- **On/off toggle** - Disable anytime without uninstalling
+
+## Installation
+
+### Step 1: Download the extension
+
+**Option A: Clone with Git**
+```bash
+git clone https://github.com/yourusername/exclamation_extension.git
+```
+
+**Option B: Download ZIP**
+1. Click the green "Code" button above
+2. Select "Download ZIP"
+3. Extract the ZIP file to a folder on your computer
+
+### Step 2: Open Chrome Extensions page
+
+1. Open Chrome browser
+2. Type `chrome://extensions` in the address bar
+3. Press Enter
+
+### Step 3: Enable Developer Mode
+
+1. Look for the "Developer mode" toggle in the top-right corner
+2. Click it to turn it ON (toggle should be blue)
+
+### Step 4: Load the extension
+
+1. Click the "Load unpacked" button (top-left area)
+2. Navigate to the folder containing the extension files
+3. Select the folder and click "Open"
+
+### Step 5: Verify installation
+
+1. You should see "Exclamation Propagandist" in your extensions list
+2. Click the puzzle piece icon in Chrome's toolbar
+3. Pin the extension for easy access (click the pin icon)
+
+## Usage
+
+1. **Click the extension icon** in your toolbar to open settings
+2. **Toggle ON/OFF** - Master switch to enable/disable the extension
+3. **Set exclamation count** - Choose how many !!! you want (1-5)
+4. **Enable categories** - Toggle News, Email, and/or Social Media
+5. **Add custom sites** - Type a domain and click Add (e.g., `reddit.com`)
+6. **Refresh the page** - Changes apply to newly loaded pages
+
+### Pre-defined Sites
+
+**News:** CNN, BBC, NY Times, The Guardian, Washington Post, Reuters, AP News, NPR
+
+**Email:** Gmail, Outlook, Yahoo Mail, ProtonMail
+
+**Social Media:** Twitter/X, Facebook, Instagram, LinkedIn, Threads, Bluesky, Mastodon
+
+## Development
+
+Built with:
+- Chrome Extension Manifest V3
+- Vanilla JavaScript
+- CSS3 with pastel aesthetic
+
+### File Structure
+
+```
+exclamation_extension/
+├── manifest.json      # Extension configuration
+├── background.js      # Service worker
+├── content_script.js  # Text replacement logic
+├── storage.js         # Storage utilities
+├── sites.js           # Pre-defined site categories
+├── popup/
+│   ├── popup.html     # Settings UI
+│   ├── popup.css      # Styling
+│   └── popup.js       # UI logic
+└── logo/              # Extension icons
+```
+
+## License
+
+MIT License - See [LICENSE](LICENSE) for details.
+
+---
+
+Made with love and way too many exclamation points!!!
