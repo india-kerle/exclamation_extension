@@ -1,5 +1,5 @@
 
-## Experience the internet more hysterically
+## 🌸 Exclamation Chrome Extension: Eperience the internet more hysterically
 
 A Chrome extension that replaces periods with exclamation points on your favorite websites. Because everything is more hysterical with exclamation points!!!
 
