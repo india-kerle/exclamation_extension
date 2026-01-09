@@ -14,6 +14,6 @@ chrome.runtime.onInstalled.addListener((details) => {
       },
       customSites: []
     });
-    console.log('Exclamation Propagandist installed with default settings');
+    console.log('Exclamation Extension installed with default settings');
   }
 });

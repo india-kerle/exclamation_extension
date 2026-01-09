@@ -1,10 +1,7 @@
-<div align="center">
-  <img width="128" alt="exclamation" src="logo/exclamation-128.png">
-  <h1>Exclamation Propagandist</h1>
-  <h3>Experience the internet more hysterically</h3>
-</div>
 
-A Chrome extension that replaces periods with exclamation points on your favorite websites. Because everything is more exciting with exclamation points!!!
+## Experience the internet more hysterically
+
+A Chrome extension that replaces periods with exclamation points on your favorite websites. Because everything is more hysterical with exclamation points!!!
 
 ## Features
 
@@ -95,7 +92,3 @@ exclamation_extension/
 ## License
 
 MIT License - See [LICENSE](LICENSE) for details.
-
----
-
-Made with love and way too many exclamation points!!!

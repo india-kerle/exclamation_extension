@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "Exclamation Propagandist",
-  "short_name": "Exclamation!!!",
-  "description": "Experience the internet more hysterically - replaces periods with exclamation points",
+  "name": "Exclamation Extension",
+  "short_name": "Exclamation",
+  "description": "Experience the internet more hysterically by replacing periods with exclamation points.",
   "author": "India Kerle",
   "version": "1.0.0",
 
@@ -20,6 +20,10 @@
   "permissions": [
     "storage"
   ],
+
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com"
+  },
 
   "background": {
     "service_worker": "background.js"
