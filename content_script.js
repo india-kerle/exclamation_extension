@@ -19,12 +19,74 @@
   // Build the replacement string
   const exclamations = '!'.repeat(settings.exclamationCount);
 
+  // Blacklist of abbreviations that shouldn't be converted
+  // These are common periods that don't end sentences
+  const abbreviationBlacklist = [
+    // Titles
+    'Mr', 'Mrs', 'Ms', 'Dr', 'Prof', 'Sr', 'Jr', 'Rev', 'Fr', 'St',
+    // Common abbreviations
+    'etc', 'e\\.g', 'i\\.e', 'vs', 'viz', 'al', 'approx', 'apt', 'dept',
+    'est', 'min', 'max', 'misc', 'no', 'vol', 'pg', 'pp', 'fig',
+    // Addresses
+    'Ave', 'Blvd', 'Rd', 'St', 'Ln', 'Dr', 'Ct', 'Pl',
+    // Months
+    'Jan', 'Feb', 'Mar', 'Apr', 'Jun', 'Jul', 'Aug', 'Sep', 'Sept', 'Oct', 'Nov', 'Dec',
+    // Time
+    'a\\.m', 'p\\.m', 'A\\.M', 'P\\.M',
+    // Academic
+    'Ph\\.D', 'M\\.D', 'B\\.A', 'M\\.A', 'B\\.S', 'M\\.S',
+    // Other
+    'Inc', 'Ltd', 'Corp', 'Co', 'Mt', 'Ft'
+  ];
+
+  // Build regex pattern for abbreviations (case insensitive)
+  const abbrPattern = abbreviationBlacklist.join('|');
+
+  // Regex for numbered lists (e.g., "1." "2." "10.")
+  const numberedListRegex = /(\d+)\.(?=\s)/g;
+
+  // Regex for abbreviations followed by period
+  const abbrRegex = new RegExp(`((?:${abbrPattern}))\\.`, 'gi');
+
+  // Placeholder to protect abbreviations and numbered lists
+  const ABBR_PLACEHOLDER = '\u0000ABBR\u0000';
+  const NUM_PLACEHOLDER = '\u0000NUM\u0000';
+
   // Regex for sentence-ending periods
   // Matches period followed by: whitespace, end of string, or closing punctuation
   const periodRegex = /\.(?=\s|$|["'"'\)\]])/g;
 
   function replaceText(text) {
-    return text.replace(periodRegex, exclamations);
+    // Store abbreviations and numbered lists
+    const abbrMatches = [];
+    const numMatches = [];
+
+    // Protect abbreviations
+    let processed = text.replace(abbrRegex, (match) => {
+      abbrMatches.push(match);
+      return ABBR_PLACEHOLDER;
+    });
+
+    // Protect numbered lists
+    processed = processed.replace(numberedListRegex, (match) => {
+      numMatches.push(match);
+      return NUM_PLACEHOLDER;
+    });
+
+    // Replace remaining periods with exclamations
+    processed = processed.replace(periodRegex, exclamations);
+
+    // Restore abbreviations
+    abbrMatches.forEach((abbr) => {
+      processed = processed.replace(ABBR_PLACEHOLDER, abbr);
+    });
+
+    // Restore numbered lists
+    numMatches.forEach((num) => {
+      processed = processed.replace(NUM_PLACEHOLDER, num);
+    });
+
+    return processed;
   }
 
   function handleTextNode(textNode) {

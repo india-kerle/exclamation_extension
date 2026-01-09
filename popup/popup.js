@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
   // Toggle label helper
   function updateToggleLabel(enabled) {
-    toggleLabel.textContent = enabled ? 'ON' : 'OFF';
+    toggleLabel.textContent = enabled ? 'on ✨' : 'off';
   }
 
   // Render custom sites list

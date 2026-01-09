@@ -6,71 +6,76 @@
   <title>Exclamation Propagandist</title>
 </head>
 <body>
-  <div class="container">
-    <!-- Header -->
-    <header class="header">
-      <h1 class="title">!!! Exclamation !!!</h1>
-      <h2 class="subtitle">Propagandist</h2>
-      <p class="tagline">experience the internet more hysterically</p>
-    </header>
-
-    <!-- Master Toggle -->
-    <div class="section">
-      <label class="toggle-container">
-        <input type="checkbox" id="enabled-toggle" class="toggle-input">
-        <span class="toggle-slider"></span>
-        <span class="toggle-label" id="toggle-label">ON</span>
-      </label>
-    </div>
-
-    <!-- Exclamation Count -->
-    <div class="section">
-      <label class="setting-label">Exclamation count:</label>
-      <select id="exclamation-count" class="select-input">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3" selected>3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-      </select>
-    </div>
-
-    <!-- Categories -->
-    <div class="section">
-      <label class="setting-label">Categories:</label>
-      <div class="checkbox-group">
-        <label class="checkbox-container">
-          <input type="checkbox" id="cat-news" class="checkbox-input">
-          <span class="checkbox-heart"></span>
-          <span class="checkbox-label">News</span>
-        </label>
-        <label class="checkbox-container">
-          <input type="checkbox" id="cat-email" class="checkbox-input">
-          <span class="checkbox-heart"></span>
-          <span class="checkbox-label">Email</span>
-        </label>
-        <label class="checkbox-container">
-          <input type="checkbox" id="cat-social" class="checkbox-input">
-          <span class="checkbox-heart"></span>
-          <span class="checkbox-label">Social Media</span>
-        </label>
+  <div class="window">
+    <div class="title-bar">
+      <span>💖 exclaim!.exe</span>
+      <div class="title-buttons">
+        <button class="title-btn">_</button>
+        <button class="title-btn">□</button>
+        <button class="title-btn">×</button>
       </div>
     </div>
-
-    <!-- Custom Sites -->
-    <div class="section">
-      <label class="setting-label">Custom sites:</label>
-      <div class="custom-site-input">
-        <input type="text" id="custom-site" class="text-input" placeholder="e.g. reddit.com">
-        <button id="add-site" class="add-button">Add</button>
+    <div class="content">
+      <div class="header">
+        <div class="logo">❗</div>
+        <p class="tagline">Experience the internet more hysterically.</p>
       </div>
-      <div id="custom-sites-list" class="custom-sites-list">
-        <!-- Sites added dynamically -->
+
+      <!-- Master Toggle -->
+      <div class="section">
+        <label class="toggle-container">
+          <input type="checkbox" id="enabled-toggle" class="toggle-input">
+          <span class="toggle-slider"></span>
+          <span class="toggle-label" id="toggle-label">on ✨</span>
+        </label>
+      </div>
+
+      <!-- Exclamation Count -->
+      <div class="section">
+        <div class="section-title"><span class="sparkle">✧</span> exclamation count:</div>
+        <select id="exclamation-count" class="select-input">
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3" selected>3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+        </select>
+      </div>
+
+      <!-- Categories -->
+      <div class="section">
+        <div class="section-title"><span class="sparkle">✧</span> categories:</div>
+        <div class="checkbox-group">
+          <label class="checkbox-container">
+            <input type="checkbox" id="cat-news" class="checkbox-input">
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">news</span>
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="cat-email" class="checkbox-input">
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">email</span>
+          </label>
+          <label class="checkbox-container">
+            <input type="checkbox" id="cat-social" class="checkbox-input">
+            <span class="checkbox-box"></span>
+            <span class="checkbox-label">social media</span>
+          </label>
+        </div>
+      </div>
+
+      <!-- Custom Sites -->
+      <div class="section">
+        <div class="section-title"><span class="sparkle">✧</span> custom sites:</div>
+        <div class="input-row">
+          <input type="text" id="custom-site" class="text-input" placeholder="e.g. reddit.com">
+          <button id="add-site" class="add-button">add!</button>
+        </div>
+        <div id="custom-sites-list" class="custom-sites-list">
+          <!-- Sites added dynamically -->
+        </div>
       </div>
     </div>
-
-    <!-- Sparkle Footer -->
-    <div class="sparkle-divider">&#10023;&#65381;&#xff9f;: *&#10023;&#65381;&#xff9f;:*</div>
   </div>
 
   <script src="../storage.js"></script>
